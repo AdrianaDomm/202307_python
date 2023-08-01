@@ -5,26 +5,26 @@ class CuentaBancaria:
         self.balance = balance
         CuentaBancaria.cuentas.append(self)
 
-        def deposito(self,amount):
-            self.balance+= amount
-            return self
+    def deposito(self,amount):
+        self.balance+= amount
+        return self
         
-        def retiro(self,amount):
-            self.balance-=amount
-            return self
+    def retiro(self,amount):
+        self.balance-=amount
+        return self
         
-        def mostrar_info_cuenta(self):
-            print("Balance: $", self.balance)
+    def mostrar_info_cuenta(self):
+        print("Balance: $", self.balance)
         
-        def generar_interes(self):
-            if(self.tasa_interes>0):
+    def generar_interes(self):
+        if(self.tasa_interes>0):
              self.balance += self.balance * self.tasa_interes
-            return self
+        return self
         
-        @classmethod
-        def imprimir_instancias(cls):
-            for cuenta in cls.cuentas:
-                cuenta.mostrar_info_cuenta()
+    @classmethod
+    def imprimir_instancias(cls):
+        for cuenta in cls.cuentas:
+            cuenta.mostrar_info_cuenta()
 
 cuenta1 = CuentaBancaria(0.02, 100)
 cuenta2 = CuentaBancaria(balance=10)
