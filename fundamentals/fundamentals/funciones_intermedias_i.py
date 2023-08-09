@@ -56,7 +56,7 @@ dojo = {
 def printInfo(some_dict):
     for key,value in some_dict.items():
         print(len(value), key)
-        for dato in vlaue:
+        for dato in value:
             print(dato)
         print()
 
